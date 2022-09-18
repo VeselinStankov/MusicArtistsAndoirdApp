@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splash_fragment">
+
+    <fragment
+        android:id="@+id/splash_fragment"
+        android:name="com.example.navigationtask.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_splash_fragment_to_login_fragment"
+            app:destination="@id/login_fragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_fragment_to_feed_fragment"
+            app:destination="@id/feed_fragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.example.navigationtask.login.LoginFragment"
+        android:label="@string/sign_in"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_fragment_to_register_fragment"
+            app:destination="@id/register_fragment" />
+        <action
+            android:id="@+id/action_login_fragment_to_feed_fragment"
+            app:destination="@id/feed_fragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/register_fragment"
+        android:name="com.example.navigationtask.register.RegisterFragment"
+        android:label="@string/register"
+        tools:layout="@layout/fragment_register">
+        <argument
+            android:name="enteredEmail"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_register_fragment_to_login_fragment"
+            app:destination="@id/login_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/feed_fragment"
+        android:name="com.example.navigationtask.feed.FeedFragment"
+        android:label="@string/feed"
+        tools:layout="@layout/fragment_feed">
+        <action
+            android:id="@+id/action_feed_fragment_to_login_fragment"
+            app:destination="@id/login_fragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_feed_fragment_to_songsFragment"
+            app:destination="@id/songs_fragment"
+            app:popUpTo="@id/feed_fragment" />
+        <action
+            android:id="@+id/action_feed_fragment_to_artistsFragment"
+            app:destination="@id/artists_fragment"
+            app:popUpTo="@id/feed_fragment" />
+        <action
+            android:id="@+id/action_feed_fragment_to_song_details_fragment"
+            app:destination="@id/song_details_fragment"
+            app:popUpTo="@id/feed_fragment" />
+        <action
+            android:id="@+id/action_feed_fragment_to_artist_details_fragment"
+            app:destination="@id/artist_details_fragment"
+            app:popUpTo="@id/feed_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/songs_fragment"
+        android:name="com.example.navigationtask.songs.SongsFragment"
+        android:label="Songs"
+        tools:layout="@layout/fragment_songs">
+        <action
+            android:id="@+id/action_songs_fragment_to_details_fragment"
+            app:destination="@id/song_details_fragment"
+            app:popUpTo="@id/songs_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artists_fragment"
+        android:name="com.example.navigationtask.artists.ArtistsFragment"
+        android:label="Artists"
+        tools:layout="@layout/fragment_artists">
+        <action
+            android:id="@+id/action_artists_fragment_to_artist_details_fragment"
+            app:destination="@id/artist_details_fragment"
+            app:popUpTo="@id/artists_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/song_details_fragment"
+        android:name="com.example.navigationtask.songdetails.SongDetailsFragment"
+        android:label="SongDetails"
+        tools:layout="@layout/fragment_song_details">
+        <argument
+            android:name="song"
+            app:argType="com.example.navigationtask.data.network.Song" />
+    </fragment>
+    <fragment
+        android:id="@+id/artist_details_fragment"
+        android:name="com.example.navigationtask.artistdetails.ArtistDetailsFragment"
+        android:label="ArtistDetails"
+        tools:layout="@layout/fragment_artist_details">
+        <argument
+            android:name="artist"
+            app:argType="com.example.navigationtask.data.network.Artist" />
+    </fragment>
+</navigation>

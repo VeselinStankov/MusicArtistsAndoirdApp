@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#6200EE</color>
+    <color name="grey">#DBE0E1</color>
+    <color name="yellow">#FFBC11</color>
+    <color name="song_artist_background">#D8D8D8</color>
+    <color name="feed_fragment_background">#F3F3F3</color>
+    <color name="search_background">#F4F4F4</color>
+    <color name="separator_color">#EBEEEE</color>
+    <color name="details_button">#3478F6</color>
+    <color name="details_text">#B2B2B4</color>
+</resources>

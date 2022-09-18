@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grp_loading_error"
+    android:layout_width="match_parent"
+    android:layout_height="188dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/background_rounded"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_loading_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/loading_songs_failed"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/btn_retry" />
+
+    </LinearLayout>
+
+</LinearLayout>

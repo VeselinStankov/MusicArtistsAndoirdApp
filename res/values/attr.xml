@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InfoView">
+        <attr name="topLabel" format="string" />
+        <attr name="middleLabel" format="string" />
+        <attr name="middleIcon" format="reference" />
+        <attr name="bottomLabel" format="string" />
+        <attr name="isSeparatorVisible" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="linesInCollapsedMode" format="integer" />
+    </declare-styleable>
+</resources>
