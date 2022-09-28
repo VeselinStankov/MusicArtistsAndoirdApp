@@ -11,4 +11,4 @@ All of the data in the application is "dummy". It is fetched from here. - https:
 The application combines most of the basic and fundamental features in Android.
 
 The app consists of several screens, including a login/register mechanism,
-a feed screen with implemented pagination and a song/artist details screen.
+a song/artist details screen and a feed screen with implemented pagination and a caching mechanism.
