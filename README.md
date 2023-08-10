@@ -1,4 +1,4 @@
-# MusicArtistsAndoirdApp
+# MusicArtistsAndroidApp
 
 <img src="Images/register_screen.png" width="320"> <img src="Images/feed_screen.png" width="320"> <img src="Images/view_all_screen.png" width="320">
 
